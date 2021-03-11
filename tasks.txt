@@ -1,0 +1,27 @@
+
+4- Write a js program to count total number of notes in given amount.
+8- Write a js program to find all roots of a quadratic equation.
+12- Write a js program to find highest frequency character in a string.
+13- Write a js program to find lowest frequency character in a string.
+14- Write a js program to count frequency of each character in a string.
+17- Write a js program to remove all occurrences of a character from string.
+18- Write a js program to remove all repeated characters from a given string.
+21- Write a js program to replace all occurrences of a character with another in a string.
+22- Write a js program to find first occurrence of a word in a given string.
+23- Write a js program to find last occurrence of a word in a given string.
+24- Write a js program to search all occurrences of a word in given string.
+25- Write a js program to count occurrences of a word in a given string.
+26- Write a js program to remove first occurrence of a word from string.
+27- Write a js program to remove last occurrence of a word in given string.
+28- Write a js program to remove all occurrence of a word in given string.
+32- Write a js program to remove all extra blank spaces from given string.
+33- Write a js program to count frequency of each element in an array
+38- Write a js program to find reverse of an array.
+39- Write a js program to put even and odd elements of array in two separate array.
+40- Write a js program to search an element in an array.
+41- Write a js program to sort array elements in ascending or descending order.
+42- Write a js program to sort even and odd elements of array separately.
+43- Write a js program to left rotate an array.
+44- Write a js program to right rotate an array.
+
+Naveed

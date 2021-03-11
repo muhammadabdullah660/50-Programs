@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>50+ Programs</title>
+</head>
+
+<body>
+    <div class="container-fluid"><br><br>
+        <div class="row">
+            <!-- Uppercase or lowercase alphabet -->
+            <div class="col-md-3">
+                <h3>Uppercase or Lowercase</h3><br>
+                Enter a single character: <br>
+                <input type="text" placeholder="Enter a character" id="uLC" maxlength="1">
+                <button class="button" onclick="upperOrLower()">Result</button><br><br>
+                <p id="uLCR" class="outputs"></p>
+            </div>
+            <!-- Week day -->
+            <div class="col-md-3">
+                <h3>Day of the week</h3><br>
+                Enter day number: <br>
+                <input type="num" placeholder="Enter a numeric value" id="dayNum" maxlength="1">
+                <button class="button" onclick="weekDay()">Result</button><br><br>
+                <p id="dayNumR" class="outputs"></p>
+            </div>
+            <!-- Number of days in a month -->
+            <div class="col-md-3">
+                <h3>Number of days in a month</h3><br>
+                Enter month number: <br>
+                <input type="num" placeholder="Enter a numeric value" id="monthNum" maxlength="2">
+                <button class="button" onclick="monthDays()">Result</button><br><br>
+                <p id="monthNumR" class="outputs"></p>
+            </div>
+            <!-- Triangle is valid or not(Angles) -->
+            <div class="col-md-3">
+                <h3>Triangle is valid or not(Angles)</h3><br>
+                Enter angles in Degrees: <br>
+                <input type="text" placeholder="Enter angle 1" id="angle1"><br>
+                <input type="text" placeholder="Enter angle 2" id="angle2"><br>
+                <input type="text" placeholder="Enter angle 3" id="angle3"><br>
+                <button class="button" onclick="anglesTri()">Find</button><br><br>
+                <p id="anglesTriR" class="outputs"></p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Triangle is valid or not(Sides) -->
+            <div class="col-md-3">
+                <h3>Triangle is valid or not(Sides)</h3><br>
+                Enter values of sides: <br>
+                <input type="text" placeholder="Enter side 1" id="side1"><br>
+                <input type="text" placeholder="Enter side 2" id="side2"><br>
+                <input type="text" placeholder="Enter side 3" id="side3"><br>
+                <button class="button" onclick="sidesTri()">Find</button><br><br>
+                <p id="sidesTriR" class="outputs"></p>
+            </div>
+            <!-- Calculate profit or loss -->
+            <div class="col-md-3">
+                <h3>Calculate profit or loss</h3><br>
+                Enter Prices: <br>
+                <input type="text" placeholder="Enter Cost Price" id="CP"><br>
+                <input type="text" placeholder="Enter Sell Price" id="SP"><br>
+                <button class="button" onclick="pL()">Find</button><br><br>
+                <p id="pLR" class="outputs"></p>
+            </div>
+            <!-- Search all occurrences of a character -->
+            <div class="col-md-3">
+                <h3>Search all occurrences of a character</h3><br>
+                Enter String Values: <br>
+                <input type="text" id="sOS" placeholder="Enter a string"> <br>
+                <input type="text" id="sOC" placeholder="Enter a single character" maxlength="1"> <br>
+                <button class="button" onclick="searchOccur()">Find</button><br><br>
+                <p id="searchOccurR" class="outputs"></p>
+            </div>
+            <!-- Count occurrences of a character -->
+            <div class="col-md-3">
+                <h3>Count occurrences of a character</h3><br>
+                Enter String Values: <br>
+                <input type="text" id="cOS" placeholder="Enter a string"> <br>
+                <input type="text" id="cOC" placeholder="Enter a single character" maxlength="1"> <br>
+                <button class="button" onclick="countOccur()">Find</button><br><br>
+                <p id="countOccurR" class="outputs"></p>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Multiplication table of any number -->
+            <div class="col-md-3">
+                <h3>Multiplication table</h3><br>
+                Enter a numeric value: <br>
+                <input type="number" id="tableNum" placeholder="Enter a number"> <br>
+                <input type="number" id="tableRange" placeholder="Enter range"> <br>
+                <button class="button" onclick="table()">Result</button>
+                <p id="tableNumR" class="outputs"></p>
+            </div>
+            <!-- Count number of digits in a number -->
+            <div class="col-md-3">
+                <h3>Number of digits in a number</h3><br>
+                Enter a numeric value: <br>
+                <input type="number" id="digitNum" placeholder="Enter a number"> <br>
+                <button class="button" onclick="digitCount()">Find</button>
+                <p id="digitCountR" class="outputs"></p>
+            </div>
+            <!-- First and last digit of a number -->
+            <div class="col-md-3">
+                <h3>First and last digit of a number</h3><br>
+                Enter a numeric value: <br>
+                <input type="number" id="fALNum" placeholder="Enter a number"> <br>
+                <button class="button" onclick="firstAndLast()">Check</button>
+                <p id="fALR" class="outputs"></p>
+            </div>
+            <!-- Swap first and last digits of a number -->
+            <div class="col-md-3">
+                <h3>First and last digit of a number</h3><br>
+                Enter a numeric value: <br>
+                <input type="number" id="fALSNum" placeholder="Enter a number"> <br>
+                <button class="button" onclick="firstAndLastSwap()">Check</button>
+                <p id="fALSR" class="outputs"></p>
+            </div>
+        </div><br><br>
+        <div class="row">
+            <!-- Sum of first and last digit of a number -->
+            <div class="col-md-3">
+                <h3>Sum of first and last digit of a number</h3><br>
+                Enter a numeric value: <br>
+                <input type="number" id="fALSum" placeholder="Enter a number"> <br>
+                <button class="button" onclick="firstAndLastSum()">Find</button>
+                <p id="fALSumR" class="outputs"></p>
+            </div>
+            <!-- Remove all extra blank spaces from given string -->
+            <div class="col-md-3">
+                <h3>Remove blank spaces from string not complete</h3><br>
+                Enter a sting value: <br>
+                <input type="text" id="blankSpcStr" placeholder="Enter a string"> <br>
+                <button class="button" onclick="blankSpaces()">Result</button>
+                <p id="blankSpcR" class="outputs"></p>
+            </div>
+            <!-- Trim leading white spaces -->
+            <div class="col-md-3">
+                <h3>Trim leading white spaces</h3><br>
+                Enter a string value: <br>
+                <input type="text" id="userLeading" placeholder="Enter a string"> <br>
+                <button class="button" onclick="trimLeading()">Result</button>
+                <p id="trimLeadingR" class="outputs"></p>
+            </div>
+            <!-- Trim leading white spaces -->
+            <div class="col-md-3">
+                <h3>Trim trailing white spaces</h3><br>
+                Enter a string value: <br>
+                <input type="text" id="userTrailing" placeholder="Enter a string"> <br>
+                <button class="button" onclick="trimTrailing()">Result</button>
+                <p id="trimTrailingR" class="outputs"></p>
+            </div>
+        </div>
+    </div><br><br><br>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Trim both leading and trailing white spaces-->
+            <div class="col-md-3">
+                <h3>Trim both leading and trailing white space</h3><br>
+                Enter a string value: <br>
+                <input type="text" id="userTL" placeholder="Enter a string"> <br>
+                <button class="button" onclick="bothTrailing()">Result</button>
+                <p id="userTLR" class="outputs"></p>
+            </div>
+            <!-- Merge two array to third array -->
+            <div class="col-md-3">
+                <h3>Merge two array to third array</h3><br>
+                Enter numeric values: <br>
+                <input type="number" id="mergeNum1" placeholder="Enter number of elements"> <br>
+                <input type="number" id="mergeNum2" placeholder="Enter number of elements"> <br>
+                <button class="button" onclick="mergeArray()">Result</button>
+                <p id="mergeArrayR" class="outputs"></p>
+            </div>
+            <!-- Delete all duplicate elements from an array -->
+            <div class="col-md-3">
+                <h3>Delete all duplicate elements from an array</h3> <br>
+                Enter numeric values: <br>
+                <input type="number" id="dupNum" placeholder="Enter number of elements"> <br>
+                <button class="button" onclick="duplicateArray()">Result</button>
+                <p id="duplicateArrayR" class="outputs"></p>
+            </div>
+            <!-- Number of duplicate elements in an array -->
+            <div class="col-md-3">
+                <h3>Number of duplicate elements in an array</h3> <br>
+                Enter numeric values: <br>
+                <input type="number" id="numDup" placeholder="Enter number of elements"> <br>
+                <button class="button" onclick="duplicateNum()">Find</button>
+                <p id="duplicateNumR" class="outputs"></p>
+            </div>
+        </div><br><br>
+        <div class="row">
+            <!-- Print all unique elements in the array -->
+            <div class="col-md-3">
+                <h3>All unique elements in the array</h3> <br>
+                Enter numeric values: <br>
+                <input type="number" id="numUnique" placeholder="Enter number of elements"> <br>
+                <button class="button" onclick="uniqueElement()">Find</button>
+                <p id="uniqueElementR" class="outputs"></p>
+            </div>
+            <!-- Uppercase string to lowercase -->
+            <div class="col-md-3">
+                <h3>Uppercase string to lowercase</h3> <br>
+                Enter string value: <br>
+                <input type="text" id="strUCase" placeholder="Enter a string value"> <br>
+                <button class="button" onclick="stringUCase()">Result</button>
+                <p id="strUCaseR" class="outputs"></p>
+            </div>
+            <!-- Total number of alphabets, digits or special character in a string -->
+            <div class="col-md-3">
+                <h3>Alphabets, digits or special character in a string</h3> <br>
+                Enter string value: <br>
+                <input type="text" id="strADS" placeholder="Enter a string value"> <br>
+                <button class="button" onclick="stringADS()">Find</button>
+                <p id="strADSR" class="outputs"></p>
+            </div>
+            <div class="col-md-3">
+                <h3>Alphabets, digits or special character in a string</h3> <br>
+                Enter string value: <br>
+                <input type="text" id="strADS" placeholder="Enter a string value"> <br>
+                <button class="button" onclick="stringADS()">Find</button>
+                <p id="strADSR" class="outputs"></p>
+            </div>
+        </div><br>
+        <div class="row">
+            <!-- Last occurrence of a character  -->
+            <div class="col-md-3">
+                <h3>Last occurrence of a character</h3> <br>
+                Enter string values: <br>
+                <input type="text" id="locS" placeholder="Enter a string"> <br>
+                <input type="text" id="locC" placeholder="Enter a single character" maxlength="1"> <br>
+                <button class="button" onclick="stringLastOcc()">Find</button>
+                <p id="locR" class="outputs"></p>
+            </div>
+            <!-- First occurrence of a character  -->
+            <div class="col-md-3">
+                <h3>First occurrence of a character</h3> <br>
+                Enter string values: <br>
+                <input type="text" id="focS" placeholder="Enter a string"> <br>
+                <input type="text" id="focC" placeholder="Enter a single character" maxlength="1"> <br>
+                <button class="button" onclick="stringFirstOcc()">Find</button>
+                <p id="focR" class="outputs"></p>
+            </div>
+            <!-- Total number of words in a string. -->
+            <div class="col-md-3">
+                <h3>Number of words in string.</h3> <br>
+                Enter string value: <br>
+                <input type="text" id="strNum" placeholder="Enter a string"> <br>
+                <button class="button" onclick="numOfWords()">Find</button>
+                <p id="strNumR" class="outputs"></p>
+            </div>
+            <!-- Total number of vowels and consonants in a string. -->
+            <div class="col-md-3">
+                <h3>Number of vowels and consonants in a string.</h3> <br>
+                Enter string value: <br>
+                <input type="text" id="vowCons" placeholder="Enter a string"> <br>
+                <button class="button" onclick="vowelConsonantNum()">Find</button>
+                <p id="vowConsR" class="outputs"></p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
