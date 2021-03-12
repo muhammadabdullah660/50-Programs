@@ -138,7 +138,7 @@
             </div>
             <!-- Remove all extra blank spaces from given string -->
             <div class="col-md-3">
-                <h3>Remove blank spaces from string not complete</h3><br>
+                <h3>Remove blank spaces from string</h3><br>
                 Enter a sting value: <br>
                 <input type="text" id="blankSpcStr" placeholder="Enter a string"> <br>
                 <button class="button" onclick="blankSpaces()">Result</button>
@@ -207,66 +207,148 @@
                 <button class="button" onclick="uniqueElement()">Find</button>
                 <p id="uniqueElementR" class="outputs"></p>
             </div>
-            <!-- Uppercase string to lowercase -->
+            <!-- Triangle is equilateral, isosceles or scalene triangle? -->
             <div class="col-md-3">
-                <h3>Uppercase string to lowercase</h3> <br>
-                Enter string value: <br>
-                <input type="text" id="strUCase" placeholder="Enter a string value"> <br>
-                <button class="button" onclick="stringUCase()">Result</button>
-                <p id="strUCaseR" class="outputs"></p>
+                <h3>Triangle is equilateral, isosceles or scalene triangle?</h3> <br>
+                Enter numeric values: <br>
+                <input type="number" id="1side" placeholder="Enter side 1"> <br>
+                <input type="number" id="2side" placeholder="Enter side 2"> <br>
+                <input type="number" id="3side" placeholder="Enter side 3"> <br>
+                <button class="button" onclick="triangleCheck()">Result</button>
+                <p id="triangleCheckR" class="outputs"></p>
             </div>
-            <!-- Total number of alphabets, digits or special character in a string -->
+            <!-- Sum of all odd numbers between 1 to n  -->
             <div class="col-md-3">
-                <h3>Alphabets, digits or special character in a string</h3> <br>
-                Enter string value: <br>
-                <input type="text" id="strADS" placeholder="Enter a string value"> <br>
-                <button class="button" onclick="stringADS()">Find</button>
-                <p id="strADSR" class="outputs"></p>
+                <h3>Sum of all odd numbers between 1 to n </h3> <br>
+                Enter numeric values: <br>
+                <input type="number" id="oddSumLimit" placeholder="Enter a limit"> <br>
+                <button class="button" onclick="oddSum()">Result</button>
+                <p id="oddSumR" class="outputs"></p>
             </div>
+            <!-- Sum of all even numbers between 1 to n  -->
             <div class="col-md-3">
-                <h3>Alphabets, digits or special character in a string</h3> <br>
-                Enter string value: <br>
-                <input type="text" id="strADS" placeholder="Enter a string value"> <br>
-                <button class="button" onclick="stringADS()">Find</button>
-                <p id="strADSR" class="outputs"></p>
+                <h3>Sum of all even numbers between 1 to n </h3> <br>
+                Enter numeric values: <br>
+                <input type="number" id="evenSumLimit" placeholder="Enter a limit"> <br>
+                <button class="button" onclick="evenSum()">Result</button>
+                <p id="evenSumR" class="outputs"></p>
             </div>
-        </div><br>
+        </div><br><br>
         <div class="row">
-            <!-- Last occurrence of a character  -->
+            <!-- Sum of all natural numbers between 1 to n  -->
             <div class="col-md-3">
-                <h3>Last occurrence of a character</h3> <br>
+                <h3>Sum of all natural numbers between 1 to n</h3> <br>
+                Enter numeric values: <br>
+                <input type="number" id="natNumLimit" placeholder="Enter a limit"> <br>
+                <button class="button" onclick="naturalSum()">Result</button>
+                <p id="naturalSumR" class="outputs"></p>
+            </div>
+            <!-- Calculate sum of digits of a number  -->
+            <div class="col-md-3">
+                <h3>Calculate sum of digits of a number</h3> <br>
+                Enter numeric value: <br>
+                <input type="number" id="sumDigitInput" placeholder="Enter a number"> <br>
+                <button class="button" onclick="sumDigitAll()">Result</button>
+                <p id="sumDigitAllR" class="outputs"></p>
+            </div>
+            <!-- Calculate product of digits of a number  -->
+            <div class="col-md-3">
+                <h3>Calculate product of digits of a number</h3> <br>
+                Enter numeric value: <br>
+                <input type="number" id="productDigitInput" placeholder="Enter a number"> <br>
+                <button class="button" onclick="productDigitAll()">Find</button>
+                <p id="productDigitAllR" class="outputs"></p>
+            </div>
+            <!-- Remove first occurrence of a character from string -->
+            <div class="col-md-3">
+                <h3>Remove first occurrence of a character from string</h3> <br>
                 Enter string values: <br>
-                <input type="text" id="locS" placeholder="Enter a string"> <br>
-                <input type="text" id="locC" placeholder="Enter a single character" maxlength="1"> <br>
-                <button class="button" onclick="stringLastOcc()">Find</button>
-                <p id="locR" class="outputs"></p>
+                <input type="text" id="removeFChar" placeholder="Enter a single character" maxlength="1"> <br>
+                <input type="text" id="removeFStr" placeholder="Enter a string"> <br>
+                <button class="button" onclick="removeFOccChar()">Find</button>
+                <p id="removeFOccCharR" class="outputs"></p>
             </div>
-            <!-- First occurrence of a character  -->
+        </div><br><br>
+        <div class="row">
+            <!-- Remove last occurrence of a character from string  -->
             <div class="col-md-3">
-                <h3>First occurrence of a character</h3> <br>
+                <h3>Remove last occurrence of a character from string</h3> <br>
                 Enter string values: <br>
-                <input type="text" id="focS" placeholder="Enter a string"> <br>
-                <input type="text" id="focC" placeholder="Enter a single character" maxlength="1"> <br>
-                <button class="button" onclick="stringFirstOcc()">Find</button>
-                <p id="focR" class="outputs"></p>
+                <input type="text" id="removeLChar" placeholder="Enter a single character" maxlength="1"> <br>
+                <input type="text" id="removeLStr" placeholder="Enter a string"> <br>
+                <button class="button" onclick="removeLOccChar()">Find</button>
+                <p id="removeLOccCharR" class="outputs"></p>
             </div>
-            <!-- Total number of words in a string. -->
+            <!-- Replace first occurrence of a character with another in string -->
             <div class="col-md-3">
-                <h3>Number of words in string.</h3> <br>
-                Enter string value: <br>
-                <input type="text" id="strNum" placeholder="Enter a string"> <br>
-                <button class="button" onclick="numOfWords()">Find</button>
-                <p id="strNumR" class="outputs"></p>
+                <h3>Replace first occurrence of a character with another in string</h3> <br>
+                Enter numeric value: <br>
+                <input type="text" id="repFChar1" maxlength="1" placeholder="Character to be replaced"> <br>
+                <input type="text" id="repFChar2" maxlength="1" placeholder="Replace with"> <br>
+                <input type="text" id="repFstr" placeholder="Enter String"> <br>
+                <button class="button" onclick="firstOcurrReplace()">Result</button>
+                <p id="firstOcurrReplaceR" class="outputs"></p>
             </div>
-            <!-- Total number of vowels and consonants in a string. -->
+            <!-- Replace last occurrence of a character with another in string -->
             <div class="col-md-3">
-                <h3>Number of vowels and consonants in a string.</h3> <br>
-                Enter string value: <br>
-                <input type="text" id="vowCons" placeholder="Enter a string"> <br>
-                <button class="button" onclick="vowelConsonantNum()">Find</button>
-                <p id="vowConsR" class="outputs"></p>
+                <h3>Replace last occurrence of a character with another in string</h3> <br>
+                Enter numeric value: <br>
+                <input type="text" id="repLChar1" maxlength="1" placeholder="Character to be replaced"> <br>
+                <input type="text" id="repLChar2" maxlength="1" placeholder="Replace with"> <br>
+                <input type="text" id="repLstr" placeholder="Enter String"> <br>
+                <button class="button" onclick="lastOcurrReplace()">Result</button>
+                <p id="lastOcurrReplaceR" class="outputs"></p>
             </div>
-        </div>
+            <!-- Find all roots of a quadratic equation -->
+            <div class="col-md-3">
+                <h3>Find all roots of a quadratic equation</h3> <br>
+                Enter numeric values: <br>
+                <input type="number" id="a" placeholder="Enter co-efficient of x^2"> <br>
+                <input type="number" id="b" placeholder="Enter co-efficient of x"> <br>
+                <input type="number" id="c" placeholder="Enter constant"> <br>
+                <button class="button" onclick="roots()">Find</button>
+                <p id="rootsR" class="outputs"></p>
+            </div>
+        </div><br><br>
+        <div class="row">
+            <!-- Reverse of an array  -->
+            <div class="col-md-3">
+                <h3>Reverse of an array</h3> <br>
+                Enter numeric values: <br>
+                <input type="number" id="reverseNum" placeholder="Enter number of elements"> <br>
+                <button class="button" onclick="reverseArray()">Result</button>
+                <p id="reverseArrayR" class="outputs"></p>
+            </div>
+            <!-- Count occurrences of a word in a given string
+            <div class="col-md-3">
+                <h3>Count occurrences of a word</h3><br>
+                Enter String Values: <br>
+                <input type="text" id="cOWS" placeholder="Enter a string"> <br>
+                <input type="text" id="cOWC" placeholder="Enter a word"> <br>
+                <button class="button" onclick="countWordOcc()">Find</button><br><br>
+                <p id="countWordOccR" class="outputs"></p>
+            </div>
+            Replace last occurrence of a character with another in string
+            <div class="col-md-3">
+                <h3>Replace last occurrence of a character with another in string</h3> <br>
+                Enter numeric value: <br>
+                <input type="text" id="repLChar1" maxlength="1" placeholder="Character to be replaced"> <br>
+                <input type="text" id="repLChar2" maxlength="1" placeholder="Replace with"> <br>
+                <input type="text" id="repLstr" placeholder="Enter String"> <br>
+                <button class="button" onclick="lastOcurrReplace()">Result</button>
+                <p id="lastOcurrReplaceR" class="outputs"></p>
+            </div>
+           Find all roots of a quadratic equation -->
+            <!-- <div class="col-md-3">
+                <h3>Find all roots of a quadratic equation</h3> <br>
+                Enter numeric values: <br>
+                <input type="number" id="a" placeholder="Enter co-efficient of x^2"> <br>
+                <input type="number" id="b" placeholder="Enter co-efficient of x"> <br>
+                <input type="number" id="c" placeholder="Enter constant"> <br>
+                <button class="button" onclick="roots()">Find</button>
+                <p id="rootsR" class="outputs"></p>
+            </div> --> 
+        </div><br><br>
     </div>
     </div>
 

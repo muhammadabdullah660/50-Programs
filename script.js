@@ -290,10 +290,11 @@ function firstAndLastSum() {
 // Remove all extra blank spaces from given string
 function blankSpaces() {
     var blankSpcStr = document.getElementById("blankSpcStr").value;
-    var blankSpc = blankSpcStr.split(" ")
-    console.log(blankSpc.toString());
-    document.getElementById("blankSpcR").innerHTML = `${blankSpc}`
+    var blankSpc = blankSpcStr.replace(/ /g, "")
+    console.log(blankSpc);
+    document.getElementById("blankSpcR").innerHTML = `${blankSpcStr} after removing all blank spaces is :- <br> ${blankSpc}`
 }
+
 
 // Trim leading white spaces
 function trimLeading() {
@@ -434,76 +435,279 @@ function uniqueElement() {
     document.getElementById("uniqueElementR").innerHTML = `Unique Elements of [${inputArray}] are :- <br> ${uniqueArray}`
     console.log(`Unique Elements of [${inputArray}] are ${uniqueArray}`);
 }
-// Last occurrence of a character
-function stringLastOcc() {
-    var locS = document.getElementById("locS").value;
-    var locC = document.getElementById("locC").value;
-    if (locS == "" || locC == "") {
-        alert("Enter String Values")
-    }
-    else {
-        let occurrenceL = locS.lastIndexOf(locC);
-        if (occurrenceL == -1) {
-            console.log(`${locC} does not occurs in ${locS}`);
-            document.getElementById("locR").innerHTML = `${locC} does not occurs in ${locS}`;
+
+
+// Triangle is equilateral, isosceles or scalene triangle?
+function triangleCheck() {
+    var side1 = parseFloat(document.getElementById("1side").value);
+    var side2 = parseFloat(document.getElementById("2side").value);
+    var side3 = parseFloat(document.getElementById("3side").value)
+    if (side1, side2, side3 > 0) {
+        if (side1 == side2 && side2 == side3) {
+            console.log(`Triangle with sides ${side1},${side2},${side3} is Equilateral`);
+            document.getElementById("triangleCheckR").innerHTML = `Triangle with sides ${side1} , ${side2} , ${side3} is Equilateral`;
+        }
+        else if (side1 == side2 || side1 == side3 || side2 == side3) {
+            console.log(`Triangle with sides ${side1},${side2},${side3} is Isosceles`);
+            document.getElementById("triangleCheckR").innerHTML = `Triangle with sides ${side1} , ${side2} , ${side3} is Isosceles`;
         }
         else {
-            console.log(`${locC} occurs at ${occurrenceL} index in ${locS}`);
-            document.getElementById("locR").innerHTML = `${locC} occurs at ${occurrenceL} index in ${locS}`;
+            console.log(`Triangle with sides ${side1},${side2},${side3} is Scalene`);
+            document.getElementById("triangleCheckR").innerHTML = `Triangle with sides ${side1} , ${side2} , ${side3} is Scalene`;
         }
-    }
-}
-// First occurrence of a character 
-function stringFirstOcc() {
-    var focS = document.getElementById("focS").value;
-    var focC = document.getElementById("focC").value;
-    if (focS == "" || focC == "") {
-        alert("Enter String Values")
     }
     else {
-        let occurrenceF = focS.indexOf(focC);
-        if (occurrenceF == -1) {
-            console.log(`${focC} does not occur in ${focS}`);
-            document.getElementById("focR").innerHTML = `${focC} does not occur in ${focS}`;
-        }
-        else {
-            console.log(`${focC} occurs at ${occurrenceF} index in ${focS}`);
-            document.getElementById("focR").innerHTML = `${focC} occurs at ${occurrenceF} index in ${focS}`;
-        }
+        alert("Enter numeric values of sides")
     }
 }
-// Total number of words in a string.
-function numOfWords() {
-    var strNum = document.getElementById("strNum").value;
-    var countWord = 1;
-    if (strNum == "") {
-        alert("Enter String value")
-    }
-    for (let i = 0; i < strNum.length; i++) {
-        if (strNum.charAt(i) == " ") {
-            countWord = countWord + 1
-        }
-    }
-    console.log(`Total number of words in a string are ${countWord}`);
-    document.getElementById("strNumR").innerHTML = `Total number of words in a string are ${countWord}`
-}
-// Total number of vowels and consonants in a string.
-function vowelConsonantNum() {
-    var vowCons = document.getElementById("vowCons").value;
-    var vowelNum = 0;
-    var consonantNum = 0;
-    if (vowCons == "") {
-        alert("Enter a string value ");
-    }
-    else if (vowCons.match(/[a-z]/g)) {
-        for (let i = 0; i < vowCons.length; i++) {
-            if (vowCons[i].match(/[aeiou]/)) {
-                vowelNum++;
-            } else if (vowCons[i].match(/[a-z]/)) {
-                consonantNum++;
+
+
+// Sum of all odd numbers between 1 to n 
+function oddSum() {
+    var oddSumLimit = document.getElementById("oddSumLimit").value;
+    var sum = 0
+    if (oddSumLimit == "") {
+        alert("Enter Numeric Values greater than 0")
+    } else {
+        for (let i = 1; i <= parseFloat(oddSumLimit); i++) {
+            if (i % 2 !== 0) {
+                sum = sum + i
             }
         }
+        document.getElementById("oddSumR").innerHTML = `The sum of odd numbers upto ${oddSumLimit} is ${sum}`
+        console.log(`The sum of odd numbers upto ${oddSumLimit} is ${sum}`);
     }
-    console.log(`Total number of consonants in given string = ${consonantNum} and Total number of vowels in given string = ${vowelNum}`);
-    document.getElementById("vowConsR").innerHTML = `Total number of consonants in given string = ${consonantNum} and Total number of vowels in given string = ${vowelNum}`
 }
+
+
+// Sum of all even numbers between 1 to n 
+function evenSum() {
+    var evenSumLimit = document.getElementById("evenSumLimit").value;
+    var sum = 0
+    if (evenSumLimit == "") {
+        alert("Enter Numeric Values greater than 0")
+    } else {
+        for (let i = 1; i <= parseFloat(evenSumLimit); i++) {
+            if (i % 2 === 0) {
+                sum = sum + i
+            }
+        }
+        document.getElementById("evenSumR").innerHTML = `The sum of even numbers upto ${evenSumLimit} is ${sum}`
+        console.log(`The sum of even numbers upto ${evenSumLimit} is ${sum}`);
+    }
+}
+
+
+// Sum of all natural numbers between 1 to n
+function naturalSum() {
+    var natNumLimit = document.getElementById("natNumLimit").value;
+    var sum = 0
+    if (natNumLimit == "") {
+        alert("Enter Numeric Values greater than 0")
+    } else {
+        for (let i = 1; i <= parseFloat(natNumLimit); i++) {
+            sum = sum + i
+        }
+        document.getElementById("naturalSumR").innerHTML = `The sum of natural numbers upto ${natNumLimit} is ${sum}`
+        console.log(`The sum of natural numbers upto ${natNumLimit} is ${sum}`);
+    }
+}
+
+// Calculate sum of digits of a number
+function sumDigitAll() {
+    var sum = 0
+    var sumDigitInput = document.getElementById("sumDigitInput").value;
+    if (sumDigitInput == "" || sumDigitInput < 0) {
+        alert("Enter Numeric Values greater than 0")
+    }
+    else {
+        for (let i = 0; i < sumDigitInput.length; i++) {
+            sum = sum + parseFloat(sumDigitInput.charAt(i))
+        }
+        document.getElementById("sumDigitAllR").innerHTML = `Sum of digits of ${sumDigitInput} is ${sum}`
+        console.log(`Sum of digits of ${sumDigitInput} is ${sum}`);
+    }
+}
+
+// Calculate product of digits of a number
+function productDigitAll() {
+    var product = 1
+    var productDigitInput = document.getElementById("productDigitInput").value;
+    if (productDigitInput == "" || productDigitInput < 0) {
+        alert("Enter Numeric Values greater than 0")
+    }
+    else {
+        for (let i = 0; i < productDigitInput.length; i++) {
+            product = product * parseFloat(productDigitInput.charAt(i))
+        }
+        document.getElementById("productDigitAllR").innerHTML = `Product of digits of ${productDigitInput} is ${product}`
+        console.log(`Product of digits of ${productDigitInput} is ${product}`);
+    }
+}
+
+
+// Remove first occurrence of a character from string
+function removeFOccChar() {
+    var removeFChar = document.getElementById("removeFChar").value;
+    var removeFStr = document.getElementById("removeFStr").value;
+    if ((/[a-zA-Z]/).test(removeFChar, removeFStr)) {
+        if (removeFStr.search(removeFChar) !== -1) {
+            var index = removeFStr.search(removeFChar);
+            var newStr = removeFStr.slice(0, index) + removeFStr.slice(index + 1)
+            document.getElementById("removeFOccCharR").innerHTML = `"${removeFStr}" after removing first occurrence of "${removeFChar}" is :- <br>"${newStr}"`
+            console.log(`${removeFStr} after removing first occurrence of ${removeFChar} is ${newStr}`);
+        }
+        else {
+            document.getElementById("removeFOccCharR").innerHTML = `Character not found`
+            console.log(`Character not found`)
+        }
+    }
+    else {
+        alert(`Invalid Input`)
+    }
+}
+
+
+// Remove last occurrence of a character from string
+function removeLOccChar() {
+    var removeLChar = document.getElementById("removeLChar").value;
+    var removeLStr = document.getElementById("removeLStr").value;
+    if ((/[a-zA-Z]/).test(removeLChar, removeLStr)) {
+        if (removeLStr.search(removeLChar) !== -1) {
+            var index = removeLStr.lastIndexOf(removeLChar);
+            var newStr = removeLStr.slice(0, index) + removeLStr.slice(index + 1)
+            document.getElementById("removeLOccCharR").innerHTML = `"${removeLStr}" after removing last occurrence of "${removeLChar}" is :- <br>"${newStr}"`
+            console.log(`${removeLStr} after removing last occurrence of ${removeLChar} is ${newStr}`);
+        }
+        else {
+            document.getElementById("removeFOccCharR").innerHTML = `Character not found`
+            console.log(`Character not found`)
+        }
+    }
+    else {
+        alert(`Invalid Input`)
+    }
+}
+
+// Replace first occurrence of a character with another in a string
+function firstOcurrReplace() {
+    var repFstr = document.getElementById("repFstr").value;
+    var repFChar1 = document.getElementById("repFChar1").value;
+    var repFChar2 = document.getElementById("repFChar2").value;
+    console.log(repFstr);
+    console.log(repFChar1);
+    console.log(repFChar2);
+    if (repFChar1, repFstr, repFChar2) {
+        if (repFstr.search(repFChar1) !== -1) {
+            newStr = repFstr.replace(repFChar1, repFChar2)
+            document.getElementById("firstOcurrReplaceR").innerHTML = `"${repFstr}" after replacing first occurrence of "${repFChar1}" with "${repFChar2} is :- <br>"${newStr}"`
+            console.log(`${repFstr} after replacing first occurrence of ${repFChar1} with "${repFChar2} is :- ${newStr}`);
+        }
+        else {
+            document.getElementById("firstOcurrReplaceR").innerHTML = `Character not found`
+            console.log(`Character not found`);
+        }
+    }
+    else {
+        alert(`Invalid Input`);
+    }
+}
+
+
+// Replace last occurrence of a character with another in a string
+function lastOcurrReplace() {
+    var repLstr = document.getElementById("repLstr").value;
+    var repLChar1 = document.getElementById("repLChar1").value;
+    var repLChar2 = document.getElementById("repLChar2").value;
+    console.log(repLChar1);
+    console.log(repLChar2);
+    console.log(repLstr);
+    if (repLChar1, repLstr, repLChar2) {
+        if (repLstr.search(repLChar1) !== -1) {
+            for (let i = 0; i < repLstr.length; i++) {
+                if (repLstr.charAt(i) == repLChar1) {
+                    index = repLstr.lastIndexOf(repLstr.charAt(i))
+                    var newStr = repLstr.split("")
+                    newStr.splice(index, 1, repLChar2)
+                    var finalStr = newStr.join("")
+                    document.getElementById("lastOcurrReplaceR").innerHTML = `"${repLstr}" after replacing last occurrence of "${repLChar1}" with "${repLChar2}" is :- <br>"${finalStr}"`
+                    console.log(`"${repLstr}" after replacing last occurrence of "${repLChar1}" with "${repLChar2}" is :- "${finalStr}"`);
+                }
+            }
+        }
+        else {
+            document.getElementById("lastOcurrReplaceR").innerHTML = `Character not found`
+            console.log(`Character not found`);
+        }
+    }
+    else {
+        alert(`Invalid Input`)
+    }
+}
+
+
+// Find all roots of a quadratic equation
+function roots() {
+    var root1, root2;
+    var a = parseFloat(document.getElementById("a").value)
+    var b = parseFloat(document.getElementById("b").value)
+    var c = parseFloat(document.getElementById("c").value)
+    let discriminant = b * b - 4 * a * c;
+    if (discriminant > 0) {
+        root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+        root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+        document.getElementById("rootsR").innerHTML = `The roots of quadratic equation are ${root1} and ${root2}`
+        console.log(`The roots of quadratic equation are ${root1} and ${root2}`);
+    }
+    else if (discriminant == 0) {
+        root1 = root2 = -b / (2 * a);
+        document.getElementById("rootsR").innerHTML = `The roots of quadratic equation are ${root1} and ${root2}`
+        console.log(`The roots of quadratic equation are ${root1} and ${root2}`);
+    }
+    else if (discriminant < 0) {
+        let realPart = (-b / (2 * a)).toFixed(2);
+        let imagPart = (Math.sqrt(-discriminant) / (2 * a)).toFixed(2);
+        document.getElementById("rootsR").innerHTML = `The roots of quadratic equation are ${realPart} + ${imagPart}i and ${realPart} - ${imagPart}i`
+        console.log(`The roots of quadratic equation are ${realPart} + ${imagPart}i and ${realPart} - ${imagPart}i`);
+    }
+    else {
+        alert("Invalid Input")
+    }
+}
+
+
+// Reverse of an array
+function reverseArray() {
+    var inputArray = [];
+    var outputArray = []
+    var reverseNum = document.getElementById("reverseNum").value;
+    if (numUnique < 0) {
+        alert("Invalid Input")
+    }
+    else {
+        for (var i = 0; i < reverseNum; i++) {
+            inputArray[i] = prompt(`Array element` + (i + 1));
+        }
+        console.log(inputArray);
+    }
+    outputArray = inputArray.reverse()
+    console.log(outputArray);
+    document.getElementById("reverseArrayR").innerHTML = `Reversed Array = ${outputArray}`
+}
+
+
+// // Count occurrences of a word in a given string
+// function countWordOcc() {
+//     var cOWS = document.getElementById("cOWS").value;
+//     var cOWC = document.getElementById("cOWC").value;
+//     console.log("User given String", cOWS);
+//     var val = cOWS.lastIndexOf(new RegExp(`${cOWC}`,"g"));
+//     if (val == -1) {
+//        var value = 0;
+//         console.log(`No.of ${cOWC} in string is 0`);
+//     }
+//     else {
+//          value = (cOWS.match(new RegExp(`${cOWC}`, "g"))).length;
+//         console.log(`No.of ${cOWC} in string is ${value}`);
+//     }
+// }

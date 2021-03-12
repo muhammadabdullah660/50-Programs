@@ -1,5 +1,5 @@
 body{
-    background-image:linear-gradient(to bottom, #5b7ea3, #485563, #2b5876, #4e4376);
+    background-image:linear-gradient(to bottom, #9ba352, #596348, #7baf6c, #437669);
     font-weight: 600;
     font-family: 'Lora', serif;
 }
@@ -8,7 +8,7 @@ h1 {
     font-weight: 800;
 }
 h3{
-    background-image:linear-gradient(to bottom,#8bc2fd , #3f7294,#625592 );
+    background-image:linear-gradient(to bottom,#b7c063 , #778a56,#7baf6c );
 }
 p{
     color: whitesmoke;
@@ -25,7 +25,7 @@ p{
    -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    background-image: linear-gradient(to right, #b7c063, #485563, #778a56, #6daa5a);
     box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
 .button:hover {
